@@ -1009,6 +1009,12 @@
       .metrics-row { grid-template-columns: 1fr 1fr; }
       .proj-card { min-width: 290px; }
     }
+  .proj-card  { opacity: 1 !important; transform: translateY(0) !important; }
+  .sk-card    { opacity: 1 !important; transform: translateY(0) !important; }
+  .cert-card  { opacity: 1 !important; transform: translateY(0) !important; }
+  .hi-card    { opacity: 1 !important; transform: translateY(0) !important; }
+  .exp-card   { opacity: 1 !important; transform: translateY(0) !important; }
+  .metric-card{ opacity: 1 !important; transform: translateY(0) !important; }
   </style>
 </head>
 
@@ -1550,13 +1556,6 @@
         });
       });
 
-      // Stagger cards
-      ['.sk-card', '.proj-card', '.exp-card', '.cert-card', '.hi-card', '.metric-card'].forEach(sel => {
-        gsap.from(sel, {
-          opacity: 0, y: 50, duration: 0.8, stagger: 0.1, ease: 'power2.out',
-          scrollTrigger: { trigger: sel, start: 'top 88%', toggleActions: 'play none none none' }
-        });
-      });
 
       // Parallax orbs
       gsap.to('.orb-1', {
